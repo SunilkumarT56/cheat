@@ -1,0 +1,244 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px; /* Smaller base font to match compact mobile view */
+  background-color: #fff;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.top-header-zone {
+  background: linear-gradient(to bottom, #003366 0%, #001a33 100%); /* Deep Navy Gradient */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px 0;
+  font-family: Verdana, sans-serif;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.info-strip {
+  background-color: #000; /* Pure Black */
+  color: #00ffff; /* Cyan */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  padding: 2px 5px;
+  font-size: 9px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent wrapping in strip */
+}
+
+.strip-left {
+  display: flex;
+  gap: 10px;
+}
+
+.leave {
+  color: #ffff00; /* Yellow */
+}
+
+.strip-right {
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+}
+
+.sign-out {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.college-header {
+  background-color: #33adff; /* Lighter bright blue header */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 0;
+  border-top: 1px solid #fff;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Content */
+.content {
+  padding: 5px 5px;
+}
+
+.exam-title-section {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.exam-title-section h3 {
+  color: #800080; /* Purple/Magenta */
+  font-size: 9px;
+  margin: 2px 0;
+  font-weight: bold;
+}
+
+.exam-title-section h2 {
+  color: #0000ff; /* Pure Blue */
+  font-size: 14px;
+  margin: 2px 0;
+  font-weight: bold;
+}
+
+/* Student Info */
+.student-info-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: #0000ff; /* Blue Labels */
+  font-size: 10px;
+  font-weight: bold;
+  flex-wrap: wrap; /* Allow wrapping on very small screens */
+}
+
+.info-block {
+  margin-bottom: 5px;
+}
+
+.info-row {
+  margin-bottom: 2px;
+}
+
+.info-label {
+  display: inline-block;
+  color: #0000ff; /* Blue Label */
+  margin-right: 5px;
+}
+
+.info-separator {
+  margin-right: 5px;
+  color: #0000ff;
+}
+
+.info-value {
+  color: #000000; /* Dark Black content */
+  font-weight: bold;
+}
+
+/* Results Table Container */
+.results-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile default */
+  gap: 5px;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Scroll horizontally if needed */
+  width: 100%;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9px; /* Small font for table */
+  border: 1px solid #bfbfbf;
+  font-family: Arial, sans-serif;
+}
+
+.results-table th {
+  background: linear-gradient(to bottom, #33adff 0%, #007acc 100%); /* Blue Gradient Header */
+  color: white;
+  border: 1px solid #fff;
+  padding: 3px 2px;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.results-table td {
+  border: 1px solid #ccc; /* Light grey borders */
+  padding: 2px 2px;
+  font-weight: 900; /* ALL CONTENT EXTRA BOLD */
+  font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+/* Column Styling - Exact Color Matching */
+.td-sem { color: #0000ff; text-align: center; vertical-align: middle; }
+.td-course { color: #0000aa; text-align: center; } /* Slightly darker blue usually */
+.td-title { color: #0000aa; text-align: left; padding-left: 4px; font-weight: 900; font-family: 'Arial Black', Gadget, sans-serif; }
+.td-credit { color: #0000ff; text-align: center; }
+.td-grade { color: #0000ff; text-align: center; }
+.td-result { color: #0000ff; text-align: center; }
+
+/* Revaluation Circular */
+.sidebar-link {
+  text-align: right;
+  padding-right: 5px;
+  margin-top: 10px; /* detailed spacing */
+  margin-bottom: 10px;
+}
+
+.sidebar-link a {
+  color: #008000; /* Standard Green */
+  font-weight: 900; /* Extra bold */
+  font-size: 11px; /* Slightly larger for better visibility */
+  text-decoration: none;
+}
+
+/* Footer */
+.disclaimer {
+  font-size: 9px;
+  color: #000066; /* Dark Blue Text */
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-ok {
+  background: linear-gradient(to bottom, #66b3ff 0%, #0066cc 100%);
+  border: 1px solid #004080;
+  color: white;
+  font-weight: bold;
+  padding: 3px 25px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 10px;
+  box-shadow: 1px 1px 1px #888;
+}
+
+/* Larger Screens Tweaks */
+@media (min-width: 768px) {
+  .results-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .sidebar-link {
+    width: 100px;
+    padding-top: 40px;
+    margin-top: 0;
+    text-align: left;
+  }
+  
+  body {
+    font-size: 11px;
+  }
+  
+  .results-table {
+    font-size: 11px;
+  }
+}
